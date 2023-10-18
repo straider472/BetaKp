@@ -1,0 +1,30 @@
+﻿<Window x:Class="Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop"
+        mc:Ignorable="d"
+        Title="BetaKP" Height="500" Width="800">
+    <Grid>
+        <!--Разметка гридами-->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Введите логин"></Label>
+                <TextBox x:Name="tbLogin" Width="200" Height="30"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
+                <Label Content="Введите пароль"></Label>
+                <PasswordBox x:Name="pbPassword" Width="200" Height="30"></PasswordBox>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Row="1" Width="200" Height="40"
+                Content="Войти" Click="ButtonClick"></Button>
+    </Grid>
+</Window>
